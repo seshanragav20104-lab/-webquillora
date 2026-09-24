@@ -1,0 +1,331 @@
+tie-ups.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partnerships | Quillora</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .tieups-hero {
+            padding-top: calc(var(--nav-height) + 4rem);
+            padding-bottom: 4rem;
+            text-align: center;
+        }
+
+        .partner-type-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 8rem;
+        }
+
+        .partner-type-section:nth-child(even) {
+            direction: rtl;
+        }
+        .partner-type-section:nth-child(even) .partner-content {
+            direction: ltr;
+        }
+
+        .partner-content {
+            padding: 2rem;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto 8rem;
+            background: var(--surface);
+            padding: 3rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            background: var(--bg-color);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition-smooth);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 2px rgba(177, 92, 255, 0.2);
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 14px;
+            background: var(--accent-gradient);
+            color: white;
+            border: none;
+            border-radius: 100px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .form-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(177, 92, 255, 0.4);
+        }
+
+        .form-message {
+            margin-top: 1rem;
+            text-align: center;
+            font-size: 0.9rem;
+            display: none;
+        }
+
+        .error-text { color: #f87171; }
+        .success-text { color: #4ade80; }
+
+        @media (max-width: 992px) {
+            .partner-type-section {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .partner-type-section:nth-child(even) {
+                direction: ltr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo-container">
+                <img src="assets/logo.png" alt="Quillora Logo">
+            </a>
+
+            <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="use-cases.html" class="nav-link">Use Cases</a></li>
+                <li><a href="tie-ups.html" class="nav-link">Tie-ups</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="contact.html" class="cta-button">Book a Demo</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Tie-ups Hero -->
+    <section class="tieups-hero">
+        <div class="container">
+            <h1 class="reveal" style="font-size: clamp(2.5rem, 6vw, 4rem);">Building a <span class="gradient-text">Literary Ecosystem.</span></h1>
+            <p class="reveal text-muted" style="max-width: 700px; margin: 1.5rem auto; font-size: 1.2rem; transition-delay: 0.1s;">
+                Quillora isn't just a service for authors; it's a partnership between the voices of today and the icons of tomorrow.
+            </p>
+        </div>
+    </section>
+
+    <!-- Partner Types -->
+    <section class="section container">
+
+        <!-- Dominant Authors -->
+        <div class="partner-type-section reveal">
+            <div class="card">
+                <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">Dominant Authors</h3>
+                <p class="text-muted">Established voices who define genres and command the attention of millions of readers.</p>
+            </div>
+            <div class="partner-content">
+                <h4 class="gradient-text" style="font-size: 1.5rem; margin-bottom: 1rem;">Why Partner With Us?</h4>
+                <p class="text-muted" style="margin-bottom: 1.5rem;">Shape the next generation of literature. By endorsing emerging talent, you expand your legacy, discover fresh perspectives, and act as a catalyst for the voices that will define the next decade of storytelling.</p>
+                <a href="#partnership-form" class="btn-secondary" style="display: inline-block;">Partner with us</a>
+            </div>
+        </div>
+
+        <!-- Influencers -->
+        <div class="partner-type-section reveal" style="transition-delay: 0.1s;">
+            <div class="card">
+                <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">Book Influencers</h3>
+                <p class="text-muted">The curators of BookTok, Bookstagram, and literary blogs who bridge the gap between books and readers.</p>
+            </div>
+            <div class="partner-content">
+                <h4 class="gradient-text" style="font-size: 1.5rem; margin-bottom: 1rem;">Why Partner With Us?</h4>
+                <p class="text-muted" style="margin-bottom: 1.5rem;">Get first access to high-quality, industry-endorsed debut works. Provide your audience with exclusive, verified gems before they hit the mainstream, cementing your status as a premier tastemaker.</p>
+                <a href="#partnership-form" class="btn-secondary" style="display: inline-block;">Partner with us</a>
+            </div>
+        </div>
+
+        <!-- Publications -->
+        <div class="partner-type-section reveal" style="transition-delay: 0.2s;">
+            <div class="card">
+                <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">Publications</h3>
+                <p class="text-muted">Forward-thinking publishing houses looking for manuscripts with pre-verified market demand.</p>
+            </div>
+            <div class="partner-content">
+                <h4 class="gradient-text" style="font-size: 1.5rem; margin-bottom: 1rem;">Why Partner With Us?</h4>
+                <p class="text-muted" style="margin-bottom: 1.5rem;">Reduce the risk of debut acquisitions. We provide a pipeline of authors who already possess the endorsement of icons and the attention of influencers, ensuring a higher probability of commercial success.</p>
+                <a href="#partnership-form" class="btn-secondary" style="display: inline-block;">Partner with us</a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Partnership Form -->
+    <section id="partnership-form" class="section container">
+        <div class="reveal" style="text-align: center; margin-bottom: 3rem;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Let's build the future of <span class="gradient-text">storytelling.</span></h2>
+            <p class="text-muted">Fill out the form below and our founding team will reach out to you.</p>
+        </div>
+
+        <div class="form-container reveal" style="transition-delay: 0.1s;">
+            <form id="partnershipForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="organisation">Organisation / Platform</label>
+                    <input type="text" id="organisation" name="organisation" placeholder="e.g. Publisher Name or Social Handle" required>
+                </div>
+                <div class="form-group">
+                    <label for="partnerType">Partner Type</label>
+                    <select id="partnerType" name="partnerType" required>
+                        <option value="" disabled selected>Select your partner type</option>
+                        <option value="dominant-author">Dominant Author</option>
+                        <option value="influencer">Book Influencer</option>
+                        <option value="publication">Publication House</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Tell us a bit about your work and why you'd like to partner with Quillora" required></textarea>
+                </div>
+                <button type="submit" class="form-submit">Submit Partnership Enquiry</button>
+                <div id="formStatus" class="form-message"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <img src="assets/logo.png" alt="Quillora Logo">
+                    <p class="text-muted" style="margin-top: 1rem;">Giving unheard authors a path to readers through strategic endorsement.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="use-cases.html">Use Cases</a></li>
+                        <li><a href="tie-ups.html">Tie-ups</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#">[LINK: Twitter]</a></li>
+                        <li><a href="#">[LINK: LinkedIn]</a></li>
+                        <li><a href="#">[LINK: Instagram]</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2026 Quillora. All rights reserved. hello@quillora.com
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.getElementById('partnershipForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const status = document.getElementById('formStatus');
+            const inputs = this.querySelectorAll('input, select, textarea');
+            let isValid = true;
+
+            inputs.forEach(input => {
+                if (!input.value.trim()) {
+                    isValid = false;
+                    input.style.borderColor = '#f87171';
+                } else {
+                    input.style.borderColor = 'var(--border)';
+                }
+            });
+
+            if (!isValid) {
+                status.innerText = 'Please fill in all required fields.';
+                status.className = 'form-message error-text';
+                status.style.display = 'block';
+                return;
+            }
+
+            status.innerText = 'Sending your enquiry...';
+            status.className = 'form-message';
+            status.style.display = 'block';
+
+            setTimeout(() => {
+                // BACKEND INTEGRATION
+                fetch('/partnership-enquiry', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        name: document.getElementById('name').value,
+                        organisation: document.getElementById('organisation').value,
+                        partnerType: document.getElementById('partnerType').value,
+                        message: document.getElementById('message').value
+                    })
+                })
+                .then(res => {
+                    if (res.ok) {
+                        status.innerText = 'Thank you! Your enquiry has been sent. Our founding team will be in touch soon.';
+                        status.className = 'form-message success-text';
+                        this.reset();
+                    } else {
+                        status.innerText = 'Server error. Please try again later.';
+                        status.className = 'form-message error-text';
+                    }
+                })
+                .catch(() => {
+                    status.innerText = 'Cannot connect to server. Is it running?';
+                    status.className = 'form-message error-text';
+                });
+            }, 1500);
+        });
+    </script>
+</body>
+</html>

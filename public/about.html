@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Quillora</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Page specific styles */
+        .about-hero {
+            padding-top: calc(var(--nav-height) + 4rem);
+            padding-bottom: 4rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .mission-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 8rem;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .founder-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .founder-card {
+            text-align: center;
+            padding: 2rem;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            transition: var(--transition-smooth);
+        }
+
+        .founder-card:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-10px);
+        }
+
+        .founder-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: #2a2a35;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border: 3px solid var(--border);
+        }
+
+        @media (max-width: 992px) {
+            .mission-section {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo-container">
+                <img src="assets/logo.png" alt="Quillora Logo">
+            </a>
+
+            <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="use-cases.html" class="nav-link">Use Cases</a></li>
+                <li><a href="tie-ups.html" class="nav-link">Tie-ups</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="contact.html" class="cta-button">Book a Demo</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- About Hero -->
+    <section class="about-hero">
+        <div class="container">
+            <h1 class="reveal" style="font-size: clamp(2.5rem, 6vw, 4rem);">Rewriting the <span class="gradient-text">Narrative</span> of Discovery.</h1>
+            <p class="reveal text-muted" style="max-width: 600px; margin: 1.5rem auto; font-size: 1.2rem; transition-delay: 0.1s;">We are a small team with a big mission: ensuring that literary brilliance is never silenced by a lack of connections.</p>
+        </div>
+    </section>
+
+    <!-- Mission & Story -->
+    <section class="section container">
+        <div class="mission-section">
+            <div class="reveal">
+                <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Our Story</h2>
+                <p class="text-muted" style="margin-bottom: 1rem;">Quillora was born from a simple observation: the world is full of incredible stories that never get read because the authors aren't "known."</p>
+                <p class="text-muted">Founded by two lifelong bibliophiles and industry observers, we realized that the gap between a finished manuscript and a best-seller isn't always about the quality of the writing—it's about the strength of the endorsement.</p>
+                <p class="text-muted" style="margin-top: 1rem;">We are a brand-new startup, building a bridge where merit is the only currency that matters.</p>
+            </div>
+            <div class="problem-card reveal" style="transition-delay: 0.2s; border-left: 4px solid var(--accent-color);">
+                <h3 style="margin-bottom: 1rem;">Our Mission</h3>
+                <p class="text-muted">To democratize literary success by replacing traditional gatekeeping with a transparent, endorsement-driven pipeline that empowers unrecognised authors to find their true audience.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values -->
+    <section class="section" style="background: var(--surface);">
+        <div class="container">
+            <h2 class="reveal" style="text-align: center; font-size: 3rem; margin-bottom: 1rem;">Our Values</h2>
+            <p class="reveal text-muted" style="text-align: center; margin-bottom: 4rem; transition-delay: 0.1s;">The principles that guide every recommendation we facilitate.</p>
+
+            <div class="values-grid reveal" style="transition-delay: 0.2s;">
+                <div class="card">
+                    <h3 class="gradient-text">Merit First</h3>
+                    <p class="text-muted">We believe the work should speak for itself. Our pipeline is designed to highlight quality, regardless of the author's background.</p>
+                </div>
+                <div class="card">
+                    <h3 class="gradient-text">Radical Transparency</h3>
+                    <p class="text-muted">Authors deserve to know where they stand. We provide clear feedback and honest paths to improvement.</p>
+                </div>
+                <div class="card">
+                    <h3 class="gradient-text">Strategic Growth</h3>
+                    <p class="text-muted">We don't just look for 'a' publisher; we look for the 'right' partner to ensure long-term author sustainability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founders -->
+    <section class="section container">
+        <h2 class="reveal" style="text-align: center; font-size: 3rem; margin-bottom: 4rem;">The Faces Behind Quillora</h2>
+
+        <div class="founder-grid reveal">
+            <div class="founder-card">
+                <div class="founder-photo">[PHOTO: Founder 1]</div>
+                <h3>V H SESHAN RAGAV</h3>
+                <p class="text-muted" style="font-weight: 600; margin-bottom: 1rem;">Co-Founder & CEO</p>
+                <p class="text-muted">Bringing years of passion for literature and a vision for a more equitable publishing world.</p>
+            </div>
+            <div class="founder-card">
+                <div class="founder-photo">[PHOTO: Founder 2]</div>
+                <h3> KANITHRA </h3>
+                <p class="text-muted" style="font-weight: 600; margin-bottom: 1rem;">Co-Founder & Head of Partnerships</p>
+                <p class="text-muted">Dedicated to building the network of influencers and authors that make the Quillora pipeline possible.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <img src="assets/logo.png" alt="Quillora Logo">
+                    <p class="text-muted" style="margin-top: 1rem;">Giving unheard authors a path to readers through strategic endorsement.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="use-cases.html">Use Cases</a></li>
+                        <li><a href="tie-ups.html">Tie-ups</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#">[LINK: Twitter]</a></li>
+                        <li><a href="#">[LINK: LinkedIn]</a></li>
+                        <li><a href="#">[LINK: Instagram]</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2026 Quillora. All rights reserved. hello@quillora.com
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Demo | Quillora</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .contact-hero {
+            padding-top: calc(var(--nav-height) + 4rem);
+            padding-bottom: 4rem;
+            text-align: center;
+        }
+
+        .demo-process {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 6rem;
+        }
+
+        .process-step {
+            background: var(--surface);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+            text-align: center;
+            transition: var(--transition-smooth);
+        }
+
+        .process-step:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-5px);
+        }
+
+        .process-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .form-container {
+            max-width: 700px;
+            margin: 0 auto 8rem;
+            background: var(--surface);
+            padding: 3rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            background: var(--bg-color);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition-smooth);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 2px rgba(177, 92, 255, 0.2);
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 14px;
+            background: var(--accent-gradient);
+            color: white;
+            border: none;
+            border-radius: 100px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            margin-top: 1rem;
+        }
+
+        .form-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(177, 92, 255, 0.4);
+        }
+
+        .form-message {
+            margin-top: 1rem;
+            text-align: center;
+            font-size: 0.9rem;
+            display: none;
+        }
+
+        .error-text { color: #f87171; }
+        .success-text { color: #4ade80; }
+
+        @media (max-width: 768px) {
+            .demo-process {
+                grid-template-columns: 1fr;
+            }
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            .form-group.full-width {
+                grid-column: span 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo-container">
+                <img src="assets/logo.png" alt="Quillora Logo">
+            </a>
+
+            <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="use-cases.html" class="nav-link">Use Cases</a></li>
+                <li><a href="tie-ups.html" class="nav-link">Tie-ups</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="contact.html" class="cta-button">Book a Demo</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1 class="reveal" style="font-size: clamp(2.5rem, 6vw, 4rem);">Book a <span class="gradient-text">Demo.</span></h1>
+            <p class="reveal text-muted" style="max-width: 600px; margin: 1.5rem auto; font-size: 1.2rem; transition-delay: 0.1s;">
+                Let's discuss your work and how our endorsement pipeline can amplify your voice.
+            </p>
+        </div>
+    </section>
+
+    <!-- Process Explanation -->
+    <section class="section container">
+        <h2 class="reveal" style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem;">How the process works</h2>
+
+        <div class="demo-process">
+            <div class="process-step reveal">
+                <span class="process-icon">📅</span>
+                <h3>Book a Demo</h3>
+                <p class="text-muted">Schedule a short introductory call with our founding team to align on your goals.</p>
+            </div>
+            <div class="process-step reveal" style="transition-delay: 0.1s;">
+                <span class="process-icon">🔍</span>
+                <h3>Work Review</h3>
+                <p class="text-muted">During the meeting, we review a sample of your work to ensure it's a fit for our network.</p>
+            </div>
+            <div class="process-step reveal" style="transition-delay: 0.2s;">
+                <span class="process-icon">📖</span>
+                <h3>Manuscript Submission</h3>
+                <p class="text-muted">Once approved in the demo, you send us your full manuscript for the endorsement pipeline.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Request Form -->
+    <section class="section container">
+        <div class="form-container reveal">
+            <h3 style="text-align: center; font-size: 2rem; margin-bottom: 2rem;">Request Your Slot</h3>
+
+            <form id="demoForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="hello@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bookTitle">Book Title</label>
+                        <input type="text" id="bookTitle" name="bookTitle" placeholder="The title of your work" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="genre">Genre</label>
+                        <select id="genre" name="genre" required>
+                            <option value="" disabled selected>Select genre</option>
+                            <option value="fiction">Fiction</option>
+                            <option value="non-fiction">Non-Fiction</option>
+                            <option value="poetry">Poetry</option>
+                            <option value="academic">Academic / Professional</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="synopsis">Short Synopsis</label>
+                        <textarea id="synopsis" name="synopsis" rows="4" placeholder="A brief overview of your book's premise..." required></textarea>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="heardAbout">How did you hear about us?</label>
+                        <input type="text" id="heardAbout" name="heardAbout" placeholder="e.g. Social Media, Word of Mouth" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="form-submit">Request Demo 💌</button>
+                <div id="formStatus" class="form-message"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <img src="assets/logo.png" alt="Quillora Logo">
+                    <p class="text-muted" style="margin-top: 1rem;">Giving unheard authors a path to readers through strategic endorsement.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="use-cases.html">Use Cases</a></li>
+                        <li><a href="tie-ups.html">Tie-ups</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#">[LINK: Twitter]</a></li>
+                        <li><a href="#">[LINK: LinkedIn]</a></li>
+                        <li><a href="#">[LINK: Instagram]</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2026 Quillora. All rights reserved. hello@quillora.com
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.getElementById('demoForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const status = document.getElementById('formStatus');
+            const inputs = this.querySelectorAll('input, select, textarea');
+            let isValid = true;
+
+            inputs.forEach(input => {
+                if (!input.value.trim()) {
+                    isValid = false;
+                    input.style.borderColor = '#f87171';
+                } else {
+                    input.style.borderColor = 'var(--border)';
+                }
+            });
+
+            if (!isValid) {
+                status.innerText = 'Please fill in all required fields.';
+                status.className = 'form-message error-text';
+                status.style.display = 'block';
+                return;
+            }
+
+            status.innerText = 'Scheduling your request...';
+            status.className = 'form-message';
+            status.style.display = 'block';
+
+            setTimeout(() => {
+                // BACKEND INTEGRATION
+                fetch('/book-demo', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        name: document.getElementById('name').value,
+                        email: document.getElementById('email').value,
+                        bookTitle: document.getElementById('bookTitle').value,
+                        genre: document.getElementById('genre').value,
+                        synopsis: document.getElementById('synopsis').value,
+                        heardAbout: document.getElementById('heardAbout').value
+                    })
+                })
+                .then(res => {
+                    if (res.ok) {
+                        status.innerText = 'Your request has been sent! Our team will review your details and reach out via email to schedule your demo.';
+                        status.className = 'form-message success-text';
+                        this.reset();
+                    } else {
+                        status.innerText = 'Server error. Please try again later.';
+                        status.className = 'form-message error-text';
+                    }
+                })
+                .catch(() => {
+                    status.innerText = 'Cannot connect to server. Is it running?';
+                    status.className = 'form-message error-text';
+                });
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
