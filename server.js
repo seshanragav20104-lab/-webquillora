@@ -3,6 +3,10 @@ const nodemailer = require('nodemailer');
 const dotenv = require('dotenv');
 const cors = require('cors');
 const path = require('path');
+const dns = require('dns');
+
+// Force Node.js to prefer IPv4 over IPv6 to fix ENETUNREACH errors on Render.com
+dns.setDefaultResultOrder('ipv4first');
 
 // Load environment variables from .env file
 dotenv.config();
