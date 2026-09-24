@@ -27,9 +27,9 @@ app.use(express.static(path.join(__dirname, 'public')));
  * Updated to use explicit SMTP settings to avoid ENETUNREACH errors on Render.com
  */
 const transporter = nodemailer.createTransport({
-    host: '74.125.142.108', // Direct IPv4 address for smtp.gmail.com to bypass IPv6 issues
-    port: 465,
-    secure: true, // use SSL
+    host: 'smtp.gmail.com',
+    port: 587,
+    secure: false, // Use STARTTLS
     auth: {
         user: process.env.EMAIL_USER, // Your gmail address
         pass: process.env.EMAIL_PASS  // Your Gmail App Password
