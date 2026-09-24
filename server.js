@@ -20,10 +20,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 /**
  * EMAIL CONFIGURATION
- * We use a transport object to tell Nodemailer how to send emails.
+ * Updated to use explicit SMTP settings to avoid ENETUNREACH errors on Render.com
  */
 const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true, // use SSL
     auth: {
         user: process.env.EMAIL_USER, // Your gmail address
         pass: process.env.EMAIL_PASS  // Your Gmail App Password
@@ -34,7 +36,6 @@ const transporter = nodemailer.createTransport({
  * ROUTE: Book a Demo (Contact Form)
  */
 app.post('/book-demo', async (req, res) => {
-    console.log("📩 Form received! Data:", req.body);
     const { name, email, bookTitle, genre, synopsis, heardAbout } = req.body;
 
     // Simple server-side validation
