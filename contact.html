@@ -198,7 +198,7 @@
         <div class="form-container reveal">
             <h3 style="text-align: center; font-size: 2rem; margin-bottom: 2rem;">Request Your Slot</h3>
 
-            <form id="demoForm">
+            <form id="demoForm" action="https://formspree.io/f/xvkgqywn" method="POST">
                 <div class="form-grid">
                     <div class="form-group">
                         <label for="name">Full Name</label>
@@ -306,18 +306,10 @@
             status.className = 'form-message';
             status.style.display = 'block';
 
-            // BACKEND INTEGRATION
-            fetch('/book-demo', {
+            fetch(this.action, {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    name: document.getElementById('name').value,
-                    email: document.getElementById('email').value,
-                    bookTitle: document.getElementById('bookTitle').value,
-                    genre: document.getElementById('genre').value,
-                    synopsis: document.getElementById('synopsis').value,
-                    heardAbout: document.getElementById('heardAbout').value
-                })
+                headers: { 'Accept': 'application/json' },
+                body: new FormData(this)
             })
             .then(res => {
                 if (res.ok) {
@@ -325,12 +317,12 @@
                     status.className = 'form-message success-text';
                     this.reset();
                 } else {
-                    status.innerText = 'Server error. Please try again later.';
+                    status.innerText = 'Submission failed. Please try again later.';
                     status.className = 'form-message error-text';
                 }
             })
             .catch(() => {
-                status.innerText = 'Cannot connect to server. Is it running?';
+                status.innerText = 'Cannot connect to Formspree. Please try again.';
                 status.className = 'form-message error-text';
             });
         });

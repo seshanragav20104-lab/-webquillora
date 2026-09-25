@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use Cases | Quillora</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Inter:wght@400;500;600&display=swap" rel="sty
+lesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .use-case-hero {
+            padding-top: calc(var(--nav-height) + 4rem);
+            padding-bottom: 4rem;
+            text-align: center;
+        }
+
+        .case-study-container {
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+            margin-bottom: 8rem;
+        }
+
+        .case-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            text-align: left;
+        }
+
+        .case-card:nth-child(even) {
+            direction: rtl;
+        }
+        .case-card:nth-child(even) .case-content {
+            direction: ltr;
+        }
+
+        .case-content {
+            padding: 2rem;
+        }
+
+        .case-label {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 100px;
+            background: rgba(177, 92, 255, 0.1);
+            color: var(--accent-color);
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(177, 92, 255, 0.2);
+        }
+
+        .case-challenge {
+            margin-bottom: 1.5rem;
+            padding-left: 1rem;
+            border-left: 2px solid var(--border);
+        }
+
+        .case-challenge h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 992px) {
+            .case-card {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .case-card:nth-child(even) {
+                direction: ltr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo-container">
+                <img src="assets/logo.png" alt="Quillora Logo">
+            </a>
+
+            <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="use-cases.html" class="nav-link">Use Cases</a></li>
+                <li><a href="tie-ups.html" class="nav-link">Tie-ups</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="contact.html" class="cta-button">Book a Demo</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Use Cases Hero -->
+    <section class="use-case-hero">
+        <div class="container">
+            <h1 class="reveal" style="font-size: clamp(2.5rem, 6vw, 4rem);">Real Paths to <span class="gradient-text">Recognition.</span></
+h1>
+            <p class="reveal text-muted" style="max-width: 700px; margin: 1.5rem auto; font-size: 1.2rem; transition-delay: 0.1s;">
+                From completed manuscripts to forgotten masterpieces, see how the Quillora pipeline solves the recognition gap for differen
+t types of authors.
+            </p>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="section container">
+        <div class="case-study-container">
+
+            <!-- Case 1 -->
+            <div class="case-card reveal">
+                <div class="card">
+                    <div class="case-label">Draft Copy</div>
+                    <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">The Debut Author</h3>
+                    <p class="text-muted">A writer with a finished, polished manuscript but zero presence in the literary community.</p>
+                </div>
+                <div class="case-content">
+                    <div class="case-challenge">
+                        <h4>The Challenge</h4>
+                        <p class="text-muted">Facing the "Cold Start" problem—no previous publications to prove marketability, making tradi
+tional agents hesitant to take a risk.</p>
+                    </div>
+                    <div class="case-solution">
+                        <h4 class="gradient-text">How Quillora Helps</h4>
+                        <p class="text-muted">By securing an endorsement from a dominant author in their genre, we instantly replace "zero
+track record" with "industry-verified quality."</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case 2 -->
+            <div class="case-card reveal">
+                <div class="card">
+                    <div class="case-label">Draft Copy</div>
+                    <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">The Unrecognised Voice</h3>
+                    <p class="text-muted">An author who has written high-quality work that previously failed to find its intended readers.<
+/p>
+                </div>
+                <div class="case-content">
+                    <div class="case-challenge">
+                        <h4>The Challenge</h4>
+                        <p class="text-muted">The work is great, but the original launch lacked the necessary amplification to break throug
+h the noise of a crowded market.</p>
+                    </div>
+                    <div class="case-solution">
+                        <h4 class="gradient-text">How Quillora Helps</h4>
+                        <p class="text-muted">We re-launch the work through our network of book influencers, placing the book directly in f
+ront of the specific niche audiences where it will resonate.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case 3 -->
+            <div class="case-card reveal">
+                <div class="card">
+                    <div class="case-label">Draft Copy</div>
+                    <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">The Self-Published Pivot</h3>
+                    <p class="text-muted">An author who self-published their work but is now seeking a credible, professional relaunch.</p>
+                </div>
+                <div class="case-content">
+                    <div class="case-challenge">
+                        <h4>The Challenge</h4>
+                        <p class="text-muted">The "Self-Published Stigma" sometimes creates a perception of lower quality, making it hard t
+o transition to traditional prestige publication.</p>
+                    </div>
+                    <div class="case-solution">
+                        <h4 class="gradient-text">How Quillora Helps</h4>
+                        <p class="text-muted">Through a strategic endorsement and a partnership with a recognized publication house, we pro
+vide the institutional credibility needed for a successful relaunch.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="container" style="margin-bottom: 8rem;">
+        <div class="cta-banner reveal">
+            <h2>Your story deserves to be heard.</h2>
+            <div class="hero-btns" style="justify-content: center; margin-top: 2rem;">
+                <a href="contact.html" class="btn-secondary" style="background: #fff; color: #000;">Book a Demo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <img src="assets/logo.png" alt="Quillora Logo">
+                    <p class="text-muted" style="margin-top: 1rem;">Giving unheard authors a path to readers through strategic endorsement.
+</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="use-cases.html">Use Cases</a></li>
+                        <li><a href="tie-ups.html">Tie-ups</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#">[LINK: Twitter]</a></li>
+                        <li><a href="#">[LINK: LinkedIn]</a></li>
+                        <li><a href="#">[LINK: Instagram]</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2026 Quillora. All rights reserved. hello@quillora.com
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

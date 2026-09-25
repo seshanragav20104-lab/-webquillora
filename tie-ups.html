@@ -202,7 +202,7 @@ tie-ups.html
         </div>
 
         <div class="form-container reveal" style="transition-delay: 0.1s;">
-            <form id="partnershipForm">
+            <form id="partnershipForm" action="https://formspree.io/f/xrpbldyn" method="POST">
                 <div class="form-group">
                     <label for="name">Full Name</label>
                     <input type="text" id="name" name="name" placeholder="Enter your name" required>
@@ -213,7 +213,7 @@ tie-ups.html
                 </div>
                 <div class="form-group">
                     <label for="partnerType">Partner Type</label>
-                    <select id="partnerType" name="partnerType" required>
+                    <select id="partnerType" name="partner_type" required>
                         <option value="" disabled selected>Select your partner type</option>
                         <option value="dominant-author">Dominant Author</option>
                         <option value="influencer">Book Influencer</option>
@@ -298,16 +298,10 @@ tie-ups.html
             status.className = 'form-message';
             status.style.display = 'block';
 
-            // BACKEND INTEGRATION
-            fetch('/partnership-enquiry', {
+            fetch(this.action, {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    name: document.getElementById('name').value,
-                    organisation: document.getElementById('organisation').value,
-                    partnerType: document.getElementById('partnerType').value,
-                    message: document.getElementById('message').value
-                })
+                headers: { 'Accept': 'application/json' },
+                body: new FormData(this)
             })
             .then(res => {
                 if (res.ok) {
@@ -315,12 +309,12 @@ tie-ups.html
                     status.className = 'form-message success-text';
                     this.reset();
                 } else {
-                    status.innerText = 'Server error. Please try again later.';
+                    status.innerText = 'Submission failed. Please try again later.';
                     status.className = 'form-message error-text';
                 }
             })
             .catch(() => {
-                status.innerText = 'Cannot connect to server. Is it running?';
+                status.innerText = 'Cannot connect to Formspree. Please try again.';
                 status.className = 'form-message error-text';
             });
         });
